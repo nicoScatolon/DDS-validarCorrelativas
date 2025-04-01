@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -12,11 +13,9 @@ import java.util.Set;
 public class Alumno {
     private String nombre;
     private String apellido;
-    private Set<Materia> materiasAprobadas;
+    private Set<Materia> materiasAprobadas = new HashSet<Materia>();
 
     public void agregarMateriaAprobada(Materia materiaNueva) {
-        if (materiaNueva != null) {
-            this.materiasAprobadas.add(materiaNueva);
-        }
+        this.materiasAprobadas.add(materiaNueva);
     }
 }

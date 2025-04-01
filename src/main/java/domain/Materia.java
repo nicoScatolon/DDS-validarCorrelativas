@@ -4,6 +4,7 @@ package domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -15,7 +16,7 @@ public class Materia {
     private Set<Materia> correlativas;
 
     public Boolean cumpleCorrelativas(Set<Materia> materiasAprobadas) {
-        return materiasAprobadas.contains(this.correlativas);
+        return materiasAprobadas.containsAll(this.correlativas);
     }
 
     public void crearMateria(String nombre, Integer codigo, Set<Materia> correlativas) {

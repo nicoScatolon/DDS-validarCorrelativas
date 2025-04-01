@@ -56,6 +56,7 @@ class InscripcionTest {
         alumno.setNombre("Franco");
         alumno.setApellido("Colapinto");
 
+
         //MATERIAS
         Materia fisica = new Materia();
         fisica.setNombre("Fisica");
@@ -65,10 +66,9 @@ class InscripcionTest {
         analisisI.setNombre("Analisis Matematico I");
         analisisI.setCodigo(450);
 
-        //EL ALUMNO APROBÓ AMBAS MATERIAS
-        alumno.agregarMateriaAprobada(fisica);
+        //EL ALUMNO APRUEBA AMBAS
         alumno.agregarMateriaAprobada(analisisI);
-
+        alumno.agregarMateriaAprobada(fisica);
 
         //CORRELATIVA
         Materia fisicaII = new Materia();
