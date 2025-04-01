@@ -41,7 +41,7 @@ class InscripcionTest {
         //INSCRIPCIÓN
         Inscripcion inscripcion = new Inscripcion();
         inscripcion.setAlumno(alumno);
-        inscripcion.setMateriasACursar(new ArrayList<>(Arrays.asList(fisicaII)));
+        inscripcion.setMateriasACursar(new HashSet<>(Set.of(fisicaII)));
 
         //VALIDACIÓN
         Assertions.assertFalse(inscripcion.aprobada());
@@ -79,10 +79,9 @@ class InscripcionTest {
         //INSCRIPCIÓN
         Inscripcion inscripcion = new Inscripcion();
         inscripcion.setAlumno(alumno);
-        inscripcion.setMateriasACursar(new ArrayList<>(Arrays.asList(fisicaII)));
+        inscripcion.setMateriasACursar(new HashSet<>(Set.of(fisicaII)));
 
         //VALIDACIÓN
         Assertions.assertTrue(inscripcion.aprobada());
     }
-
 }

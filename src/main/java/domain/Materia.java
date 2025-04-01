@@ -14,13 +14,8 @@ public class Materia {
     private Integer codigo;
     private Set<Materia> correlativas;
 
-    public Boolean cumpleCorrelativas(List<Materia> materiasAprobadas) {
-        return correlativas
-                .stream()
-                .allMatch(materiaCorrelativa ->
-                        materiasAprobadas.stream()
-                                .anyMatch(materiaAprobada -> materiaAprobada.codigo.equals(materiaCorrelativa.codigo))
-                );
+    public Boolean cumpleCorrelativas(Set<Materia> materiasAprobadas) {
+        return materiasAprobadas.contains(this.correlativas);
     }
 
     public void crearMateria(String nombre, Integer codigo, Set<Materia> correlativas) {

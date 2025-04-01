@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Set;
 
 
 @Getter
@@ -12,7 +13,7 @@ import java.util.List;
 public class Inscripcion {
     private Alumno alumno;
     private Boolean fueAprobada;
-    private List<Materia> materiasACursar;
+    private Set<Materia> materiasACursar;
 
     public Boolean aprobada(){
         return materiasACursar.stream()
